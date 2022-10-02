@@ -31,4 +31,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Net-tools
-        run: apt install net-tools && netstat -nltup
+        run: sudo apt install net-tools && sudo netstat -nltup
