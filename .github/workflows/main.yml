@@ -30,5 +30,10 @@ jobs:
         run: ls -lR
 
       # Runs a single command using the runners shell
-      - name: Install Net-tools
-        run: sudo apt install net-tools && sudo netstat -nltup
+      - name: Run Net-tools
+        run: sudo netstat -nltup
+        
+      - name: Ansible CLI
+        uses: tomasnorre/ansible-cli-client@0.0.2
+        with:
+          command: ansible --version
