@@ -37,3 +37,8 @@ jobs:
         uses: tomasnorre/ansible-cli-client@0.0.2
         with:
           command: ansible --version
+          
+      - name: Secrets
+        run: |
+          echo 'This is the Username: ${{ secrets.USERNAME }}'
+          echo 'This is the Password: ${{ secrets.PASSWORD }}'
