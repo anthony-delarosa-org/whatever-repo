@@ -22,5 +22,7 @@ jobs:
       - name: List Files and Folders
         run: ls -la
 
-      - name: Install Net-tools
-        run: sudo netstat -nltup
+      - name: Get Secrets
+        run: |
+          echo 'This is my username ${{ secrets.USERNAME }}'
+          echo 'This is my password ${{ secrets.PASSWORD }}' 
