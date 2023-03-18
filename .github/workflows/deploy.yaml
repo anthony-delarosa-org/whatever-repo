@@ -31,6 +31,6 @@ jobs:
         
       - name: Print Secrets
         run: |
-          echo 'This is my username ${{ $env:USER_CRED }}'
-          echo 'This is my password ${{ $env:PASS_CRED }}' 
+          echo 'This is my username  $USER_CRED '
+          echo 'This is my password  $PASS_CRED ' 
 
