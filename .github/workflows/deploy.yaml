@@ -27,11 +27,5 @@ jobs:
           USER_CRED: ${{ secrets.USERNAME }}
           PASS_CRED: ${{ secrets.PASSWORD }}
         run: |
-          echo $USER_CRED | USER_NAME
-          echo $PASS_CRED | PASSWORD
-        
-      - name: Print Secrets
-        run: |
-          echo 'This is my username $USER_NAME'
-          echo 'This is my password $PASSWORD' 
-
+          echo $USER_CRED 
+          echo $PASS_CRED
