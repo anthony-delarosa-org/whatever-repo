@@ -27,10 +27,11 @@ jobs:
           USER_CRED: ${{ secrets.USERNAME }}
           PASS_CRED: ${{ secrets.PASSWORD }}
         run: |
-          echo 'Got Secrets!'
+          echo $USER_CRED | USER_NAME
+          echo $PASS_CRED | PASSWORD
         
       - name: Print Secrets
         run: |
-          echo 'This is my username  $USER_CRED '
-          echo 'This is my password  $PASS_CRED ' 
+          echo 'This is my username $USER_NAME'
+          echo 'This is my password $PASSWORD' 
 
