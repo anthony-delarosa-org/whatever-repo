@@ -22,7 +22,13 @@ jobs:
       - name: List Files and Folders
         run: ls -la
 
-      - name: Get Secrets
+      - name: Pass Secrets
+        env: 
+          USER_CRED: ${{ secrets.USERNAME }}
+          PASS_CRED: ${{ secrest.PASSWORD }}
+        
+      - name: Print Secrets
         run: |
-          echo 'This is my username ${{ secrets.USERNAME }}'
-          echo 'This is my password ${{ secrets.PASSWORD }}' 
+          echo 'This is my username ${{ env:USERNAME }}'
+          echo 'This is my password ${{ env:PASSWORD }}' 
+
