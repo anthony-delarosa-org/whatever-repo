@@ -26,6 +26,8 @@ jobs:
         env: 
           USER_CRED: ${{ secrets.USERNAME }}
           PASS_CRED: ${{ secrest.PASSWORD }}
+        run: |
+          echo 'Got Secrets!'
         
       - name: Print Secrets
         run: |
